@@ -1,0 +1,33 @@
+x = 3
+y = 2
+z = 2
+n = 3
+
+generated_values = []
+cleaned_values = []
+
+for i in range(x+1):
+    for j in range(y+1):
+        for k in range(z+1):
+            generated_values.append([i, j, k])
+
+for i in generated_values:
+    if sum(i) != n:
+        cleaned_values.append(i)
+
+print(cleaned_values)
+
+'--------------------------------------------------'
+
+x = 2
+y = 2
+z = 2
+n = 2
+
+generated_values = []
+cleaned_values = []
+
+values = [((generated_values.append([i, j, k]) for k in range(z + 1)) for j in range(y + 1)) for i in range(x + 1)]
+solution = [(cleaned_values.append(i) if sum(i) != n else print('Unknown value')) for i in values]
+
+print(cleaned_values)
